@@ -1,0 +1,29 @@
+{
+  "name": "spotify-clone",
+  "version": "1.0.0",
+  "description": "i am create mern stack spotify-clone",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "seed:songs": "node src/seeds/songs.js",
+    "seed:albums": "node src/seeds/album.js"
+  },
+  "type": "module",
+  "author": "rafey",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "^5.1.6",
+    "@clerk/express": "^1.3.46",
+    "cloudinary": "^2.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-fileupload": "^1.5.1",
+    "mongoose": "^8.10.0",
+    "socket.io": "^4.8.1"
+  }
+}
