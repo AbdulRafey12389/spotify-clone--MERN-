@@ -54,7 +54,7 @@ app.use(
 // Initializing cors package middleware for cross-origin resource sharing...
 app.use(
   cors({
-    origin: "http://localhost:3000", // Ensure there's no trailing slash
+    origin: "https://spotify-clone-mern-cv4p.vercel.app", // Ensure there's no trailing slash
     credentials: true, // If using cookies or authorization headers
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers

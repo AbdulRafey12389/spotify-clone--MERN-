@@ -3,11 +3,11 @@ import Message from "../models/messages.model.js";
 
 export const initializeSocket = (server) => {
 	const io = new Server(server, {
-		cors: {
-			origin: "http://localhost:3000",
-			credentials: true,
-		},
-	});
+    cors: {
+      origin: "https://spotify-clone-mern-cv4p.vercel.app",
+      credentials: true,
+    },
+  });
 
 	const userSockets = new Map(); // { userId: socketId}
 	const userActivities = new Map(); // {userId: activity}
