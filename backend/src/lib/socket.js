@@ -4,7 +4,7 @@ import Message from "../models/messages.model.js";
 export const initializeSocket = (server) => {
 	const io = new Server(server, {
     cors: {
-      origin: "https://spotify-clone-mern-cv4p.vercel.app",
+      origin: "https://spotify-clone-mern-cv4p.vercel.ap",
       credentials: true,
     },
   });
