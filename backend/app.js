@@ -54,7 +54,7 @@ app.use(
 // Initializing cors package middleware for cross-origin resource sharing...
 app.use(
   cors({
-    origin: "https://spotify-clone-mern-cv4p.vercel.app", // Ensure there's no trailing slash
+    origin: "*", // Ensure there's no trailing slash
     credentials: true, // If using cookies or authorization headers
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
@@ -84,14 +84,12 @@ app.use("/api/stats", statRoute);
 
 // error handler route...
 app.use((err, req, res, next) => {
-  return res
-    .status(500)
-    .json({
-      message:
-        process.env.NODE_ENV === "production"
-          ? "Internal server error"
-          : err.message,
-    });
+  return res.status(500).json({
+    message:
+      process.env.NODE_ENV === "production"
+        ? "Internal server error"
+        : err.message,
+  });
 });
 
 // Starting the server and listening on the specified port
